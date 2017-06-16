@@ -1,0 +1,21 @@
+{
+  "name": "ntim.c9.reviewcomments",
+  "description": "Review comments in c9",
+  "version": "0.0.1",
+  "author": "",
+  "contributors": [
+    {
+      "name": "Tim Nguyen",
+      "email": "ntim.bugs@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "plugins": {
+    "plugin": {}
+  },
+  "categories": ["miscellaneous"],
+  "licenses": []
+}

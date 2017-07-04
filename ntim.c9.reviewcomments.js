@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
     main.consumes = ["Plugin", "panels", "ui", "Panel", "tabManager", "settings"];
-    main.provides = ["reviewcomments"];
+    main.provides = ["ntim.c9.reviewcomments"];
     return main;
 
     function main(options, imports, register) {

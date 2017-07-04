@@ -14,7 +14,9 @@
     "url": ""
   },
   "plugins": {
-    "plugin": {}
+    "ntim.c9.reviewcomments": {
+      "packagePath": "plugins/ntim.c9.reviewcomments/ntim.c9.reviewcomments"
+    }
   },
   "categories": ["miscellaneous"],
   "licenses": []

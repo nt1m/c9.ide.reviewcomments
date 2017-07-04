@@ -59,7 +59,7 @@ define(function(require, exports, module) {
         });
 
         register(null, {
-            "reviewcomments": reviewcomments
+            "ntim.c9.reviewcomments": plugin
         });
     }
 });

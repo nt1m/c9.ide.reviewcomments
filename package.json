@@ -1,5 +1,5 @@
 {
-  "name": "ntim.c9.reviewcomments",
+  "name": "c9.ide.reviewcomments",
   "description": "Review comments in c9",
   "version": "0.0.1",
   "author": "",
@@ -14,8 +14,8 @@
     "url": ""
   },
   "plugins": {
-    "ntim.c9.reviewcomments": {
-      "packagePath": "plugins/ntim.c9.reviewcomments/ntim.c9.reviewcomments"
+    "c9.ide.reviewcomments": {
+      "packagePath": "plugins/c9.ide.reviewcomments/ntim.c9.reviewcomments"
     }
   },
   "categories": ["miscellaneous"],

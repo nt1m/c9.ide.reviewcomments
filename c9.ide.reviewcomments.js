@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
     main.consumes = ["Plugin", "panels", "ui", "Panel", "tabManager", "settings"];
-    main.provides = ["ntim.c9.reviewcomments"];
+    main.provides = ["c9.ide.reviewcomments"];
     return main;
 
     function main(options, imports, register) {
@@ -59,7 +59,7 @@ define(function(require, exports, module) {
         });
 
         register(null, {
-            "ntim.c9.reviewcomments": plugin
+            "c9.ide.reviewcomments": plugin
         });
     }
 });

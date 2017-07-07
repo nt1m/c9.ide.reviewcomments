@@ -15,7 +15,7 @@
   },
   "plugins": {
     "c9.ide.reviewcomments": {
-      "packagePath": "plugins/c9.ide.reviewcomments/ntim.c9.reviewcomments"
+      "packagePath": "plugins/c9.ide.reviewcomments/c9.ide.reviewcomments"
     }
   },
   "categories": ["miscellaneous"],

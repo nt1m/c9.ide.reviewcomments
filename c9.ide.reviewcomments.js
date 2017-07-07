@@ -47,11 +47,6 @@ define(function(require, exports, module) {
             e.html.appendChild(iframe);
         });
 
-        // This is only here to make the example run
-        // for when you are executing this in the console.
-        plugin.load();
-
-
         /***** Register and define API *****/
 
         plugin.freezePublicAPI({

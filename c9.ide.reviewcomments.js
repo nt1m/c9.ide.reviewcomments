@@ -5,14 +5,14 @@ define(function(require, exports, module) {
 
     function main(options, imports, register) {
         var Panel = imports.Panel;
+        var panels = imports.panels;
         var ui = imports.ui;
         var tabManager = imports.tabManager;
         var settings = imports.settings;
-        console.log(imports)
 
         /***** Initialization *****/
 
-        var plugin = new Panel("Reviews", main.consumes, {
+        var plugin = new Panel("reviews", main.consumes, {
             index: 300,
             caption: "Reviews",
             where: "right",
@@ -46,6 +46,12 @@ define(function(require, exports, module) {
             };
             e.html.appendChild(iframe);
         });
+
+        /* Don't show reviews panel by default */
+        if (panels.activePanels.includes("reviews")) {
+            plugin.deactivate("reviews");
+        }
+        
 
         /***** Register and define API *****/
 

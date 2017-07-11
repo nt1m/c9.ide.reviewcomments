@@ -18,9 +18,6 @@ define(function(require, exports, module) {
             where: "right",
         });
 
-        function jumpToLine(tab, line, column) {
-            tab.editor.ace.gotoline(tab, line, column, settings.getBool("editors/code/@animatedscroll"));
-        }
         plugin.on("draw", function(e){
             ui.insertCss(require("text!./panel.css"), options.staticPrefix, plugin);
 
@@ -32,14 +29,33 @@ define(function(require, exports, module) {
                 iframe.contentWindow.postMessage({ origin: window.location.origin }, "https://nt1m.github.io");
                 window.addEventListener("message", function(e) {
                     if (e.data.file) {
-                        tabManager.open({ path: e.data.file, active: true }, function(err, tab) {
-                            if (err || !tab.editor || !tab.editor.ace) {
-                                tab.editor.on("documentLoad", function(e) {
-                                    jumpToLine(tab, e.data.lineNumber, 0);
-                                });
-                                return;
+                        tabManager.open({
+                            path: e.data.file,
+                            active: true,
+                            focus: true,
+                            document: {
+                                ace: {
+                                    jump: {
+                                        row: e.data.lineNumber,
+                                        column: 0,
+                                    }
+                                }
                             }
-                            jumpToLine(tab, e.data.lineNumber, 0);
+                        }, function(err) {
+                            // TODO: ugly
+                            !err && setTimeout(() =>
+                                tabManager.open({
+                                    path: e.data.file,
+                                    document: {
+                                        ace: {
+                                            jump: {
+                                                row: e.data.lineNumber,
+                                                column: 0,
+                                            }
+                                        }
+                                    }
+                                })
+                            , 800);
                         });
                     }
                 });

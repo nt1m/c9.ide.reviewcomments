@@ -36,7 +36,7 @@ define(function(require, exports, module) {
                             document: {
                                 ace: {
                                     jump: {
-                                        row: e.data.lineNumber,
+                                        row: e.data.lineNumber - 1,
                                         column: 0,
                                     }
                                 }
@@ -49,7 +49,7 @@ define(function(require, exports, module) {
                                     document: {
                                         ace: {
                                             jump: {
-                                                row: e.data.lineNumber,
+                                                row: e.data.lineNumber - 1,
                                                 column: 0,
                                             }
                                         }

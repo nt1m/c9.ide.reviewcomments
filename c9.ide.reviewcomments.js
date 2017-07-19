@@ -30,7 +30,7 @@ define(function(require, exports, module) {
                 window.addEventListener("message", function(e) {
                     if (e.data.file) {
                         tabManager.open({
-                            path: e.data.file,
+                            path: "/" + e.data.file,
                             active: true,
                             focus: true,
                             document: {

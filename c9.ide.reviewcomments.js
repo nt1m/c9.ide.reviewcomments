@@ -45,7 +45,7 @@ define(function(require, exports, module) {
                             // TODO: ugly
                             !err && setTimeout(() =>
                                 tabManager.open({
-                                    path: e.data.file,
+                                    path: "/" + e.data.file,
                                     document: {
                                         ace: {
                                             jump: {
